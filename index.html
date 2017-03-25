@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="/assets/jquery.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Jim+Nightshade" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+<style>
+body {
+  background-image: url(http://cafesweetsbakery.com/templates/construction/images/background.jpg);
+  font-family: helvetica, sans-serif;
+  margin: 0 auto;
+  max-width: 600px;
+}
+div {
+  height: 250px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+}
+h1 {
+  font-family: 'Jim Nightshade', cursive;
+  text-align: center;
+  font-size: 42px;
+  color: #aaaaaa;
+  margin: 60px 0 0 0;
+}
+h2 {
+  text-align: center;
+  color: #bbbbbb;
+  margin: 0px 0 70px 0;
+}
+p {
+  color: rgba(255,255,255,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(148,43,226,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(148,43,226,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(148,43,226,1), rgba(0,0,0,.4));
+  padding: 10px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+  font-family: 'Lobster', cursive;
+}
+.logo{
+  background-color: white;
+  height: 120px;
+  width: 476px;
+}
+
+small {
+  opacity: 0;
+}
+
+.show-description p {
+  height: 120px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+
+.first{
+  background-image: url("http://i.imgur.com/uLZDRpa.jpg");
+}
+.second{
+  background-image: url("http://i.imgur.com/LvA8tr7.jpg");
+}
+.dessert{
+  background-image: url("http://i.imgur.com/Dp9V27p.jpg");
+}
+.price {
+  float: right;
+}
+/* this is used to make responsive website
+  when the dimension is change the content displayed
+  according to the dimensions.
+*/
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 16px;
+  }
+}
+
+</style>
+
+</head>
+<body>
+<div class="logo">
+   <img src="http://i.imgur.com/jKIRJgf.png"></img>
+</div>
+   <h1>WELCOME TO CAFE SWEET BAKERY</h1>
+<div class="first">
+   <p>Sweet Affirmation<span class="price">$53</span><br>
+   <small>Our wedding cake was absolutely perfect. A beautiful three-tier cake, white with pale pink elegant design and artfully placed flower decor.
+    It looked amazing and was absolutely delicious. They were so sweet throughout the process and very helpful. </small></p>
+</div>
+<div class="second">
+   <p> Decorated Cupcakes <span class="price">$25</span><br />
+   <small>Available in various flavors, decorations, and prices. Mini sizes can be ordered 1 week in advance with a minimum order quantity of 24 of each flavor.</small></p>
+</div>
+<div class="dessert">
+   <p>Milk & Berries<span class="price">$15</span><br />
+   <small>Light & delicate sponge cake layers soaked with Tres Leches, filled & finished with whipped cream and fresh berries</small></p>
+</div>
+
+<script>
+  $('div').on('click', function() {
+      $(this).toggleClass('show-description'); //this on-click function is combine both the classes and gives the output
+  });
+</script>
+
+</body>
